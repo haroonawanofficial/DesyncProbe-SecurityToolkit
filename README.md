@@ -1,7 +1,6 @@
 # DesyncProbe
-Advanced HTTP desync testing tool with robust error handling, multithreading, and comprehensive reporting for security assessment.
 
-# DesyncProbe: Advanced HTTP Desync Testing Tool
+Advanced HTTP desync testing tool with robust error handling, multithreading, and comprehensive reporting for security assessment.
 
 ## Overview
 
@@ -20,6 +19,31 @@ DesyncProbe is a powerful and advanced tool designed for assessing HTTP desync v
 - **Detailed Reporting:** Generate HTML reports with extensive information about test case results, execution details, and historical data.
 
 - **Vulnerability Assessment:** Discover security vulnerabilities and assess the server's handling of authenticated requests.
+
+## Test Cases and Their Importance
+
+DesyncProbe includes a range of test cases designed to uncover vulnerabilities and issues in web servers. Here's a brief overview of some test cases and their significance:
+
+1. **Discrepancies in Processing:**
+   - *Why it helps:* Detects differences in how the server processes identical requests, which could indicate desync vulnerabilities.
+
+2. **Request Differences:**
+   - *Why it helps:* Identifies vulnerabilities related to variations in responses based on request parameters.
+
+3. **Cache Poisoning:**
+   - *Why it helps:* Tests for the ability to inject malicious content into the server's cache, revealing cache-related vulnerabilities.
+
+4. **Server Forwarding:**
+   - *Why it helps:* Ensures the server handles forwarding requests correctly, preventing potential issues with redirects.
+
+5. **Server Proxy Analysis:**
+   - *Why it helps:* Determines if the server acts as a proxy, which can affect security and response handling.
+
+6. **Session Fixation:**
+   - *Why it helps:* Detects vulnerabilities related to session management, a common target for attackers.
+
+7. **Access Control Testing:**
+   - *Why it helps:* Verifies that the server correctly enforces access controls, preventing unauthorized access to restricted resources.
 
 ## Performance
 
