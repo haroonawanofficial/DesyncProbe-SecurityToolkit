@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 use LWP::UserAgent;
 use DBI;
 use HTML::Template;
@@ -82,7 +84,7 @@ sub test_server_forwarding {
     my $request = HTTP::Request->new('GET', "http://$target_domain/admin");
     my $response = $ua->request($request);
 
-    my $result = ($response->code == HTTP_TEMPORARY_REDIRECT) ? "Pass" : "Fail";
+    my $result = ($response->code == 302) ? "Pass" : "Fail"; # Replace HTTP_TEMPORARY_REDIRECT with 302
 
     print "Test Case 4: $result - Server forwards requests.\n";
 
@@ -169,7 +171,8 @@ sub generate_html_report {
     while (my $row = $sth->fetchrow_hashref) {
         push @results, $row;
     }
-    $tmpl->param(results => \@results);
+    $tmpl->param(test_results => \@results); # Assigning test results to 'test_results' parameter
+    print "Parameters being set: ", join(", ", $tmpl->param()), "\n"; # Print out parameters being set
     open(my $html_report, '>', 'desync_test_report.html') or die "Cannot open HTML report: $!";
     print $html_report $tmpl->output;
     close $html_report;
