@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desync Test Report</title>
+</head>
+<body>
+    <h1>Desync Test Report</h1>
+    <table border="1">
+        <tr>
+            <th>Test Case</th>
+            <th>Result</th>
+        </tr>
+        <tmpl_loop name="test_results">
+            <tr>
+                <td><tmpl_var name="test_case"></td>
+                <td><tmpl_var name="result"></td>
+            </tr>
+        </tmpl_loop>
+    </table>
+</body>
+</html>
