@@ -10,12 +10,12 @@
             <th>Test Case</th>
             <th>Result</th>
         </tr>
-        <tmpl_loop name="test_results">
+        <TMPL_LOOP NAME=test_results>
             <tr>
-                <td><tmpl_var name="test_case"></td>
-                <td><tmpl_var name="result"></td>
+                <td><TMPL_VAR NAME=test_case></td>
+                <td><TMPL_VAR NAME=result></td>
             </tr>
-        </tmpl_loop>
+        </TMPL_LOOP>
     </table>
 </body>
 </html>
